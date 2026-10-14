@@ -1,0 +1,17 @@
+{
+  "name": "magpie-agent-lake",
+  "version": "0.1.0",
+  "description": "Use Magpie models in Lake's AI workbench",
+  "type": "module",
+  "files": ["lake.agent.js", "icon.png", "README.md", "LICENSE"],
+  "keywords": ["magpie", "magpie-agent", "lake", "llm-gateway"],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clean-Lakes/magpie-agent-lake.git"
+  },
+  "magpie": {
+    "agent": "./lake.agent.js",
+    "icon": "https://raw.githubusercontent.com/Clean-Lakes/magpie-agent-lake/main/icon.png"
+  }
+}
