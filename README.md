@@ -1,4 +1,10 @@
-# Magpie Agent plugin for Lake
+# Lake 的 Magpie Agent 插件
+
+在 Magpie 的 **Agent** 页面为 Lake 选择模型，Lake 发起的新请求就会通过 Magpie 网关使用该模型。关闭接入后，Lake 会恢复原来的模型配置。
+
+安装前请先启动一次 Lake，让它创建仅当前用户可读的配置文件。随后在 Magpie 的非官方 Agent 插件列表中找到 **magpie-agent-lake** 并安装，或运行 `magpie plugin add github:Clean-Lakes/magpie-agent-lake`。Magpie 和 Lake 需在同一台机器上使用同一个用户账号。
+
+## English
 
 Choose a [Magpie](https://usemagpie.ai/docs/plugins#agents) model for the [Lake](https://github.com/Clean-Lakes/Lake) AI workbench from Magpie's **Agents** page. Magpie connects Lake to its local OpenAI-compatible gateway. Lake reads the selection on each new request.
 

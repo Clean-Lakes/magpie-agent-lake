@@ -1,7 +1,7 @@
 {
   "name": "magpie-agent-lake",
-  "version": "0.1.0",
-  "description": "Use Magpie models in Lake's AI workbench",
+  "version": "0.1.1",
+  "description": "在 Magpie 的 Agent 页面为 Lake 选择模型，让 Lake 通过 Magpie 网关使用所选模型。",
   "type": "module",
   "files": ["lake.agent.js", "icon.png", "README.md", "LICENSE"],
   "keywords": ["magpie", "magpie-agent", "lake", "llm-gateway"],
