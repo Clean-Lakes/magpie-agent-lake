@@ -10,13 +10,24 @@ export const agent = {
   model: "model",
   ua: ["lake"],
   icon: "https://raw.githubusercontent.com/Clean-Lakes/magpie-agent-lake/main/icon.png",
-  notice: "Lake uses the new model on the next request. Run Lake once before connecting so it can prepare its private configuration file.",
+  notice: "Lake uses this as its default model and lists your Magpie models in its own picker. Run Lake once before connecting so it can prepare its private configuration file.",
 };
 
-export function connect({ gateway, model }) {
+export function connect({ gateway, model, models }) {
+  const catalog = (Array.isArray(models) ? models : [])
+    .filter(item => item && typeof item.id === "string")
+    .map(item => ({
+      id: item.id,
+      name: typeof item.name === "string" ? item.name : item.id,
+      contextWindow: item.context || 0,
+      maxOutput: item.output || 0,
+      supportsImageInput: Boolean(item.images),
+      reasoningEfforts: Array.isArray(item.efforts) ? item.efforts : [],
+    }));
   return {
     baseURL: gateway.v1,
     key: gateway.key,
+    catalog,
     contextWindow: model.context || 0,
     maxOutput: model.output || 0,
     supportsImageInput: Boolean(model.images),

@@ -1,9 +1,9 @@
 {
   "name": "magpie-agent-lake",
-  "version": "0.1.1",
-  "description": "在 Magpie 的 Agent 页面为 Lake 选择模型，让 Lake 通过 Magpie 网关使用所选模型。",
+  "version": "0.2.0",
+  "description": "在 Magpie 的 Agent 页面为 Lake 设置默认模型，并在 Lake 内切换 Magpie 可用模型。",
   "type": "module",
-  "files": ["lake.agent.js", "icon.png", "README.md", "LICENSE"],
+  "files": ["lake.agent.js", "lake-dev.agent.js", "icon.png", "README.md", "LICENSE"],
   "keywords": ["magpie", "magpie-agent", "lake", "llm-gateway"],
   "license": "Apache-2.0",
   "repository": {
