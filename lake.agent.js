@@ -20,5 +20,6 @@ export function connect({ gateway, model }) {
     contextWindow: model.context || 0,
     maxOutput: model.output || 0,
     supportsImageInput: Boolean(model.images),
+    reasoningEfforts: Array.isArray(model.efforts) ? model.efforts : [],
   };
 }
